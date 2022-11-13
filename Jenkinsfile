@@ -1,5 +1,3 @@
-DOCKER_HUB_USERNAME= "ahmeed83"
-
 pipeline {
     agent any
     stages {
@@ -16,7 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("<DOCKER_HUB_USERNAME>/train-schedule")
+                    app = docker.build("ahmeed83/train-schedule")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
