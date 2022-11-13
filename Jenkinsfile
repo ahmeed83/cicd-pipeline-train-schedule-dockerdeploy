@@ -1,3 +1,5 @@
+DOCKER_HUB_USERNAME= "ahmeed83"
+
 pipeline {
     agent any
     stages {
